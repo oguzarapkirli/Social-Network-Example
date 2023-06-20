@@ -25,6 +25,9 @@ This project was made for use in job applications and to be an example for new l
 - Project Cleanup
 - More Social Media Logic than a Showcase
 - Hide Jpa Id's with Mirror-Reference Id
+- Mail Activation
+- S3 Integration for uploads?
+- Image Compression
 
 ## Contribution
 
