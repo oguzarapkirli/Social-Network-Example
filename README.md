@@ -4,6 +4,12 @@ Uses Spring Boot 3.x, Spring Framework 6.x.
 
 This project was made for use in job applications and to be an example for new learners.
 
+Swagger can be found at:
+
+```bash
+  git clone https://localhost:8080/swagger-ui.html
+```
+
 ## Features
 
 - JWT Auth
