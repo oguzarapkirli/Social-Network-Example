@@ -5,10 +5,9 @@ import com.oguzarapkirli.socialnetworkexample.service.StoryService;
 import com.oguzarapkirli.socialnetworkexample.util.core.ApiResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.util.UUID;
 
 @RestController
@@ -24,14 +23,14 @@ public class StoryController {
     }
 
     @PostMapping
-    public ApiResponse createStory(@RequestBody @Valid StoryRequest storyRequest, @AuthenticationPrincipal Authentication authentication) {
-        var story = storyService.createStory(storyRequest, authentication.getName());
+    public ApiResponse createStory(@RequestBody @Valid StoryRequest storyRequest, Principal principal) {
+        var story = storyService.createStory(storyRequest, principal.getName());
         return ApiResponse.ok(story, "Story is created");
     }
 
     @DeleteMapping("/{storyID}")
-    public ApiResponse deleteStory(@PathVariable UUID storyID, @AuthenticationPrincipal Authentication authentication) {
-        var story = storyService.deleteStory(storyID, authentication.getName());
+    public ApiResponse deleteStory(@PathVariable UUID storyID, Principal principal) {
+        var story = storyService.deleteStory(storyID, principal.getName());
         return ApiResponse.ok(story, "Story is deleted");
     }
 }

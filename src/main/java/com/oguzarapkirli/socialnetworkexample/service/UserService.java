@@ -70,7 +70,7 @@ public class UserService {
     private void saveUserToken(AppUser user, String jwtToken) {
         var token = Token.builder()
                 .user(user)
-                .token(jwtToken)
+                .userToken(jwtToken)
                 .expired(false)
                 .revoked(false)
                 .build();

@@ -14,8 +14,8 @@ public class Resilience4jConfig {
     public RateLimiterConfig rateLimiterConfig() {
         // 1 request per 5 seconds
         return RateLimiterConfig.custom()
-                .limitRefreshPeriod(Duration.ofSeconds(5))
-                .limitForPeriod(1)
+                .limitRefreshPeriod(Duration.ofSeconds(100))
+                .limitForPeriod(100)
                 .timeoutDuration(Duration.ofSeconds(0))
                 .build();
     }

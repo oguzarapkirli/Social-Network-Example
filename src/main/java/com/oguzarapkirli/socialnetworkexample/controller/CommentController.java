@@ -6,10 +6,9 @@ import com.oguzarapkirli.socialnetworkexample.service.CommentService;
 import com.oguzarapkirli.socialnetworkexample.util.core.ApiResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
 import java.util.UUID;
 
 @RestController
@@ -19,7 +18,7 @@ public class CommentController {
     private final CommentService commentService;
 
     @PostMapping
-    public ApiResponse createComment(@RequestBody @Valid CommentRequest commentRequest, @AuthenticationPrincipal Authentication principal) {
+    public ApiResponse createComment(@RequestBody @Valid CommentRequest commentRequest, Principal principal) {
         commentService.createComment(commentRequest, principal.getName());
         return ApiResponse.ok(null, "Comment is created");
     }
@@ -30,7 +29,7 @@ public class CommentController {
     }
 
     @DeleteMapping("/{commentId}")
-    public ApiResponse deleteCommentById(@PathVariable UUID commentId, @AuthenticationPrincipal Authentication principal) {
+    public ApiResponse deleteCommentById(@PathVariable UUID commentId, Principal principal) {
         commentService.deleteCommentById(commentId, principal.getName());
         return ApiResponse.ok(null, "Comment is deleted");
     }

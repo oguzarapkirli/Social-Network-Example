@@ -28,7 +28,6 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .csrf(csrf -> csrf.disable())
-                .cors(cors -> cors.disable())
                 .authorizeHttpRequests(request -> request.requestMatchers(
                         "/api/v1/auth/**",
                         "/v2/api-docs",
@@ -42,7 +41,7 @@ public class SecurityConfig {
                         "/h2-console/",
                         "/api/v1/file/{fileName}",
                         "/swagger-ui/**",
-                        "/swagger-ui.html").permitAll()
+                        "/swagger-ui.html").permitAll().anyRequest().authenticated()
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authenticationProvider(authenticationProvider)

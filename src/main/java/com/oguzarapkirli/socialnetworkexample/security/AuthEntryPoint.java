@@ -24,7 +24,7 @@ public class AuthEntryPoint implements AuthenticationEntryPoint {
         json.put("status", String.valueOf(HttpStatus.UNAUTHORIZED.value()));
         json.put("hasError", String.valueOf(true));
         String jsonStr = new ObjectMapper().writeValueAsString(json);
-        response.setStatus(HttpStatus.TOO_MANY_REQUESTS.value());
+        response.setStatus(HttpStatus.UNAUTHORIZED.value());
         response.setContentType("application/json");
         response.getWriter().write(jsonStr);
     }
