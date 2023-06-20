@@ -1,3 +1,7 @@
+/*
+ * Copyright Oğuz Arapkirli (c) 2023.
+ */
+
 package com.oguzarapkirli.socialnetworkexample.controller;
 
 import com.oguzarapkirli.socialnetworkexample.service.LikeService;
@@ -18,15 +22,15 @@ public class LikeController {
     private final LikeService likeService;
 
     @PostMapping("/{postId}/like")
-    public ApiResponse like (@PathVariable UUID postId, Principal principal) {
+    public ApiResponse like(@PathVariable UUID postId, Principal principal) {
         likeService.likePost(postId, principal.getName());
-        return ApiResponse.ok( null, "Post is liked");
+        return ApiResponse.ok(null, "Post is liked");
     }
 
     @PostMapping("/{postId}/unlike")
-    public ApiResponse unlike (@PathVariable UUID postId, Principal principal) {
+    public ApiResponse unlike(@PathVariable UUID postId, Principal principal) {
         likeService.unlikePost(postId, principal.getName());
-        return ApiResponse.ok( null, "Post is unliked");
+        return ApiResponse.ok(null, "Post is unliked");
     }
 
 

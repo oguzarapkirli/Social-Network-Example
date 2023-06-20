@@ -1,3 +1,7 @@
+/*
+ * Copyright Oğuz Arapkirli (c) 2023.
+ */
+
 package com.oguzarapkirli.socialnetworkexample.exception;
 
 import lombok.Getter;
@@ -16,6 +20,5 @@ public final class ApiException extends RuntimeException {
         this.message = message;
         this.status = status;
     }
-
-
 }
+

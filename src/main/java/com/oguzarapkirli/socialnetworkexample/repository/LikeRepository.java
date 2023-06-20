@@ -10,6 +10,7 @@ import java.util.UUID;
 
 @Repository
 public interface LikeRepository extends JpaRepository<Like, UUID> {
-    Optional<List<Like>> findAllByPostId (UUID postId);
-    Optional<Like> findByPostIdAndCreatorId (UUID postId, UUID creatorId);
+    Optional<List<Like>> findAllByPostId(UUID postId);
+
+    Optional<Like> findByPostIdAndCreatorId(UUID postId, UUID creatorId);
 }

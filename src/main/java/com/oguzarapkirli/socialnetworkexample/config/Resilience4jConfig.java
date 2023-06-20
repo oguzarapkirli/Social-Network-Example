@@ -19,6 +19,7 @@ public class Resilience4jConfig {
                 .timeoutDuration(Duration.ofSeconds(0))
                 .build();
     }
+
     @Bean
     public RateLimiterRegistry rateLimiterRegistry(RateLimiterConfig rateLimiterConfig) {
         return RateLimiterRegistry.of(rateLimiterConfig);

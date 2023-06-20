@@ -1,3 +1,7 @@
+/*
+ * Copyright Oğuz Arapkirli (c) 2023.
+ */
+
 package com.oguzarapkirli.socialnetworkexample.security;
 
 import lombok.RequiredArgsConstructor;
@@ -51,5 +55,4 @@ public class SecurityConfig {
 
         return http.build();
     }
-
 }

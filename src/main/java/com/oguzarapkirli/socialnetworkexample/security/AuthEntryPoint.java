@@ -1,3 +1,7 @@
+/*
+ * Copyright Oğuz Arapkirli (c) 2023.
+ */
+
 package com.oguzarapkirli.socialnetworkexample.security;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -15,9 +19,7 @@ import java.util.HashMap;
 public class AuthEntryPoint implements AuthenticationEntryPoint {
 
     @Override
-    public void commence(HttpServletRequest request,
-                         HttpServletResponse response,
-                         AuthenticationException authException) throws IOException {
+    public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException {
 
         HashMap<String, String> json = new HashMap<>();
         json.put("message", "Unauthorized Access to proceed this request. Please send a valid token.");

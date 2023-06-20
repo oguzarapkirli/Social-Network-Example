@@ -1,3 +1,7 @@
+/*
+ * Copyright Oğuz Arapkirli (c) 2023.
+ */
+
 package com.oguzarapkirli.socialnetworkexample.dto;
 
 import jakarta.validation.constraints.Email;
@@ -22,7 +26,7 @@ public record RegisterRequest(
         String firstName,
         String lastName
 ) {
-        public RegisterRequest {
-                if (username != null) username = username.toLowerCase();
-        }
+    public RegisterRequest {
+        if (username != null) username = username.toLowerCase();
+    }
 }

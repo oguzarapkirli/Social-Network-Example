@@ -1,3 +1,7 @@
+/*
+ * Copyright Oğuz Arapkirli (c) 2023.
+ */
+
 package com.oguzarapkirli.socialnetworkexample.service;
 
 import com.oguzarapkirli.socialnetworkexample.dto.CommentRequest;

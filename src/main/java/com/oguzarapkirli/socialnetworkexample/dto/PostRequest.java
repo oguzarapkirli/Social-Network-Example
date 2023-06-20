@@ -1,3 +1,7 @@
+/*
+ * Copyright Oğuz Arapkirli (c) 2023.
+ */
+
 package com.oguzarapkirli.socialnetworkexample.dto;
 
 import com.oguzarapkirli.socialnetworkexample.util.enums.PostType;

@@ -1,3 +1,7 @@
+/*
+ * Copyright Oğuz Arapkirli (c) 2023.
+ */
+
 package com.oguzarapkirli.socialnetworkexample.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -11,7 +15,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class AuthResponse {
-
     @JsonProperty("access_token")
     private String accessToken;
     @JsonProperty("refresh_token")

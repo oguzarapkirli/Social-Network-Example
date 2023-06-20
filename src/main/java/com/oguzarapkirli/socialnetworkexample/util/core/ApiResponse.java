@@ -24,7 +24,7 @@ public class ApiResponse extends ResponseEntity<Object> {
         return new ApiResponse(response, HttpStatus.OK);
     }
 
-    public static ApiResponse badRequest( String message, List<ValidationError> validationErrors) {
+    public static ApiResponse badRequest(String message, List<ValidationError> validationErrors) {
         ApiResponseModel response = new ApiResponseModel();
         response.setStatusCode(400);
         response.setMessage(message != null ? message : "Bad Request");

@@ -1,3 +1,7 @@
+/*
+ * Copyright Oğuz Arapkirli (c) 2023.
+ */
+
 package com.oguzarapkirli.socialnetworkexample.controller;
 
 import com.oguzarapkirli.socialnetworkexample.dto.AuthResponse;

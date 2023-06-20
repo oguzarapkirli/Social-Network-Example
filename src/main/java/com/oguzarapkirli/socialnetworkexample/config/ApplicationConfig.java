@@ -1,3 +1,7 @@
+/*
+ * Copyright Oğuz Arapkirli (c) 2023.
+ */
+
 package com.oguzarapkirli.socialnetworkexample.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -66,7 +70,6 @@ public class ApplicationConfig implements WebMvcConfigurer {
         registry.addInterceptor(new RateLimitingInterceptor(rateLimiter))
                 .addPathPatterns("/**");
     }
-
 
     @Override
     public void addFormatters(FormatterRegistry registry) {

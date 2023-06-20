@@ -1,5 +1,8 @@
-package com.oguzarapkirli.socialnetworkexample.controller;
+/*
+ * Copyright Oğuz Arapkirli (c) 2023.
+ */
 
+package com.oguzarapkirli.socialnetworkexample.controller;
 
 import com.oguzarapkirli.socialnetworkexample.dto.CommentRequest;
 import com.oguzarapkirli.socialnetworkexample.service.CommentService;
@@ -33,7 +36,6 @@ public class CommentController {
         commentService.deleteCommentById(commentId, principal.getName());
         return ApiResponse.ok(null, "Comment is deleted");
     }
-
 
 
 }

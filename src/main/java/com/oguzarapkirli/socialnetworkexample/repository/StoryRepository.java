@@ -1,3 +1,7 @@
+/*
+ * Copyright Oğuz Arapkirli (c) 2023.
+ */
+
 package com.oguzarapkirli.socialnetworkexample.repository;
 
 import com.oguzarapkirli.socialnetworkexample.model.Story;
@@ -13,3 +17,4 @@ public interface StoryRepository extends JpaRepository<Story, UUID> {
     Optional<List<Story>> findAllByCreatorId(UUID creatorId);
 
 }
+

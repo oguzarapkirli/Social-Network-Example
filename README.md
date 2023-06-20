@@ -1,10 +1,8 @@
-
 # Social Network API
 
 Uses Spring Boot 3.x, Spring Framework 6.x.
 
 This project was made for use in job applications and to be an example for new learners.
-
 
 ## Features
 
@@ -21,8 +19,9 @@ This project was made for use in job applications and to be an example for new l
 - DTO's with Records
 - JPA BaseEntity and Auditing
 - Get current user via Controller
-  
+
 ## TODO
+
 - Project Cleanup
 - More Social Media Logic than a Showcase
 - Hide Jpa Id's with Mirror-Reference Id
@@ -31,7 +30,6 @@ This project was made for use in job applications and to be an example for new l
 
 This project is closed to Contribution.
 
-  
 ## Lisans
 
 [WTFPL](http://www.wtfpl.net/txt/copying/)

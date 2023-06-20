@@ -1,3 +1,7 @@
+/*
+ * Copyright Oğuz Arapkirli (c) 2023.
+ */
+
 package com.oguzarapkirli.socialnetworkexample.repository;
 
 import com.oguzarapkirli.socialnetworkexample.model.Token;
@@ -15,3 +19,4 @@ public interface TokenRepository extends JpaRepository<Token, UUID> {
 
     Optional<Token> findByUserToken(String token);
 }
+

@@ -1,3 +1,7 @@
+/*
+ * Copyright Oğuz Arapkirli (c) 2023.
+ */
+
 package com.oguzarapkirli.socialnetworkexample.controller;
 
 import com.oguzarapkirli.socialnetworkexample.service.FileService;
@@ -63,8 +67,6 @@ public class FileController {
     @GetMapping("/{fileName}")
     public ResponseEntity<Resource> getFileByName(@PathVariable String fileName) throws IOException {
         Resource resource = fileService.getFileByName(fileName);
-        return ResponseEntity.ok().header(
-                        "Content-Type", Files.probeContentType(resource.getFile().toPath()))
-                .body(resource);
+        return ResponseEntity.ok().header("Content-Type", Files.probeContentType(resource.getFile().toPath())).body(resource);
     }
 }

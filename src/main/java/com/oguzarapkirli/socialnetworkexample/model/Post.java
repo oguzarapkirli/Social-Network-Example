@@ -2,7 +2,10 @@ package com.oguzarapkirli.socialnetworkexample.model;
 
 import com.oguzarapkirli.socialnetworkexample.util.enums.PostType;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Getter
 @Setter

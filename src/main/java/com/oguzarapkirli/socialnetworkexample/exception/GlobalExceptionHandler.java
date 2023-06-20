@@ -1,7 +1,7 @@
 package com.oguzarapkirli.socialnetworkexample.exception;
 
-import com.oguzarapkirli.socialnetworkexample.util.core.ValidationError;
 import com.oguzarapkirli.socialnetworkexample.util.core.ApiResponse;
+import com.oguzarapkirli.socialnetworkexample.util.core.ValidationError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -28,7 +28,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(ApiException.class)
     public ApiResponse handleException(ApiException ex) {
         return switch (ex.getStatus()) {
-            case BAD_REQUEST -> ApiResponse.badRequest(ex.getMessage(),null);
+            case BAD_REQUEST -> ApiResponse.badRequest(ex.getMessage(), null);
             case UNAUTHORIZED -> ApiResponse.unauthorized(ex.getMessage());
             case FORBIDDEN -> ApiResponse.forbidden(ex.getMessage());
             case NOT_FOUND -> ApiResponse.notFound(ex.getMessage());
